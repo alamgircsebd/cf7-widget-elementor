@@ -206,14 +206,14 @@ function void_cf7_spare_me()
 
     if ( isset( $_GET['void_cf7_elep_2021_temporary'] ) && ! empty( $_GET['void_cf7_elep_2021_temporary'] ) ) {
         if ( 1 === absint( $_GET['void_cf7_elep_2021_temporary'] ) ) {
-            add_option( 'void_cf7_elep_2021_temporary', 'yes' );
-            add_option( 'void_cf7_elep_2021_temporary_time', strtotime("now") );
+            update_option( 'void_cf7_elep_2021_temporary', 'yes' );
+            update_option( 'void_cf7_elep_2021_temporary_time', strtotime("now") );
         }
     }
 
     if ( isset( $_GET['void_cf7_elep_2021_never'] ) && ! empty( $_GET['void_cf7_elep_2021_never'] ) ) {
         if ( 1 === absint( $_GET['void_cf7_elep_2021_never'] ) ) {
-            add_option( 'void_cf7_elep_2021_never', 'yes' );
+            update_option( 'void_cf7_elep_2021_never', 'yes' );
         }
     }
 }
